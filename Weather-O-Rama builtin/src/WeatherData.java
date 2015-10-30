@@ -1,5 +1,5 @@
 
-import java.util.ArrayList;
+import java.util.Observable;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,39 +10,19 @@ import java.util.ArrayList;
  *
  * @author Nils
  */
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
 
-    //Generics gebruikt voor de ArrayList zodat we niet meer moeten typecasten
-    private final ArrayList<Observer> observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
+    //We don't need to make a data object to hold the observers
     public WeatherData() {
-        observers = new ArrayList<>();
-    }
-
-    @Override
-    public void registerObserver(Observer o) {
-        observers.add(o);
-    }
-
-    @Override
-    public void removeObserver(Observer o) {
-        int i = observers.indexOf(o);
-        if (i >= 0) {
-            observers.remove(i);
-        }
-    }
-
-    @Override
-    public void notifyObservers() {
-        //opgelost met lambda inplaats van voorbeeld in boek
-        observers.stream().forEach(observer -> observer.update(temperature, humidity, pressure));
     }
 
     public void measurementsChanged() {
-        notifyObservers();
+        setChanged();  //first setChanged to indicate the state has changed
+        notifyObservers(); //we aren't sending a data object with the notifyObservers() call so we're using PULL
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
@@ -51,5 +31,17 @@ public class WeatherData implements Subject {
         this.pressure = pressure;
         measurementsChanged();
     }
-    //other Weatherdata methods here
+
+    public float getTemperature() {
+        return this.temperature;
+    }
+
+    public float getHumidity() {
+        return this.humidity;
+    }
+
+    public float getPressure() {
+        return this.pressure;
+    }
+
 }
