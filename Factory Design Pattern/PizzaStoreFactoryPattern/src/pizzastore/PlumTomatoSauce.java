@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public class PlumTomatoSauce extends Sauce {
+public class PlumTomatoSauce implements Sauce {
     
 }

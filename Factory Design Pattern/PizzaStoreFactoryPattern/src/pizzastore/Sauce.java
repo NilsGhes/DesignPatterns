@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public abstract class Sauce {
+public interface Sauce {
     
 }

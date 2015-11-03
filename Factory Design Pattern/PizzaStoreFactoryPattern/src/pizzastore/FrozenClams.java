@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public class FrozenClams extends Clams{
+public class FrozenClams implements Clams{
     
 }

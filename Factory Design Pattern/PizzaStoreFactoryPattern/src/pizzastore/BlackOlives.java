@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public class BlackOlives extends Veggies {
+public class BlackOlives implements Veggies {
     
 }

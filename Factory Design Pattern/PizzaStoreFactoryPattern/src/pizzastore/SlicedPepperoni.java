@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public class SlicedPepperoni extends Pepperoni {
+public class SlicedPepperoni implements Pepperoni {
     
 }

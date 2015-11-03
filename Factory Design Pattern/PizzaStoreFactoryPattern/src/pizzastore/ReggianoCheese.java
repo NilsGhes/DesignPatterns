@@ -9,6 +9,6 @@ package pizzastore;
  *
  * @author Nils
  */
-public class ReggianoCheese extends Cheese {
+public class ReggianoCheese implements Cheese {
     
 }
