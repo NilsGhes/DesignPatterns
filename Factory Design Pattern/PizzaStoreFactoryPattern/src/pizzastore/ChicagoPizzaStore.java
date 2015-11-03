@@ -12,20 +12,24 @@ package pizzastore;
 public class ChicagoPizzaStore extends PizzaStore {
 
     @Override
-    public Pizza createPizza(String type) {
+    protected Pizza createPizza(String type) {
         Pizza pizza = null;
+        PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
         switch (type) {
             case "cheese":
-                pizza = new ChicagoStyleCheesePizza();
+                pizza = new CheesePizza(ingredientFactory);
+                pizza.setName("Chicago Style Cheese Pizza");
                 break;
             case "pepperoni":
-                pizza = new ChicagoStylePepperoniPizza();
+                pizza = new PepperoniPizza(ingredientFactory);
+                pizza.setName("Chicago Style Pepperoni Pizza");
                 break;
             case "clam":
-                pizza = new ChicagoStyleClamPizza();
-                break;
+                pizza = new ClamPizza(ingredientFactory);
+                pizza.setName("Chicago Style Cheese Pizza");
             case "veggie":
-                pizza = new CaliforniaStyleVeggiePizza();
+                pizza = new VeggiePizza(ingredientFactory);
+                pizza.setName("Chicago Style Veggie Pizza");
                 break;
         }
         return pizza;
