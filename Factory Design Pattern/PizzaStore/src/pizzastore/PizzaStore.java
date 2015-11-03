@@ -11,11 +11,21 @@ package pizzastore;
  */
 public class PizzaStore {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    SimplePizzaFactory factory;
+
+    public PizzaStore(SimplePizzaFactory factory) {
+        this.factory = factory;
     }
-    
+
+    public Pizza orderPizza(String type) {
+        Pizza pizza;
+        pizza = factory.createPizza(type);
+
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
+        return pizza;
+
+    }
 }
