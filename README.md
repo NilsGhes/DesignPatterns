@@ -25,3 +25,7 @@ Define an interface for creating an object, but let subclasses decide which clas
 #Simple Factory // not a Design Pattern
 
 A simple way to decouple your clients from concrete classes. 
+
+#Singleton
+
+Ensure a  class only has one instance and provide a global point of access to it.
