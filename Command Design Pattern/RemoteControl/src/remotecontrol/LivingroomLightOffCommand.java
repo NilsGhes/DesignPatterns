@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 public class LivingroomLightOffCommand implements Command {
 	Light light;

@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 
 public class GarageDoorUpCommand implements Command {

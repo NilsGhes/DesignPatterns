@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 public class StereoOffCommand implements Command {
 	Stereo stereo;

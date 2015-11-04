@@ -1,4 +1,4 @@
-package headfirst.command.remote;
+package remotecontrol;
 
 public class TV {
 	String location;

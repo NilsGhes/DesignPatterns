@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 
 public class HottubOffCommand implements Command {

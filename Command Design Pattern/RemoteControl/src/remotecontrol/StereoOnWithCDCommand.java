@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 public class StereoOnWithCDCommand implements Command {
 	Stereo stereo;

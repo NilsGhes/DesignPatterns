@@ -1,3 +1,5 @@
+package remotecontrol;
+
 
 public class HottubOnCommand implements Command {
 	Hottub hottub;
