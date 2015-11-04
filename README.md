@@ -29,3 +29,7 @@ A simple way to decouple your clients from concrete classes.
 #Singleton
 
 Ensure a  class only has one instance and provide a global point of access to it.
+
+#Command Design Pattern
+
+Encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations
