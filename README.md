@@ -33,3 +33,11 @@ Ensure a  class only has one instance and provide a global point of access to it
 #Command Design Pattern
 
 Encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations
+
+#Adapter
+
+Converts the interface of a class into another interface clients expect. Lets classes wortk together that couldn't otherwise because of incompatible features
+
+#Facade
+
+Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
