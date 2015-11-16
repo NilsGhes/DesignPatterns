@@ -41,3 +41,7 @@ Converts the interface of a class into another interface clients expect. Lets cl
 #Facade
 
 Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+#Template
+
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses redefine certain steps of algorithm without changing the algorithm's structure
