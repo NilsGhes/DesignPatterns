@@ -45,3 +45,7 @@ Provides a unified interface to a set of interfaces in a subsystem. Facade defin
 #Template
 
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses redefine certain steps of algorithm without changing the algorithm's structure
+
+#State 
+
+Allow an object to alter its behaviour when its internal state changes. The object will appear to change its class.
